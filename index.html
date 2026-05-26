@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Class Monitor Voting System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🗳️ Class Monitor Voting</h1>
+    <p class="subtitle">Vote for your class monitor</p>
+
+    <div class="vote-box">
+      <input type="text" id="voterName" placeholder="Enter your name">
+
+      <select id="candidateSelect">
+        <option value="">Select Candidate</option>
+        <option value="Alice">Alice</option>
+        <option value="John">John</option>
+        <option value="Emma">Emma</option>
+        <option value="David">David</option>
+      </select>
+
+      <button id="voteBtn">Vote</button>
+    </div>
+
+    <div class="stats">
+      <h2>📊 Live Results</h2>
+
+      <div id="results"></div>
+
+      <button class="reset-btn" id="resetBtn">
+        Reset Voting
+      </button>
+    </div>
+
+    <div class="voters-section">
+      <h2>✅ Voters List</h2>
+      <ul id="votersList"></ul>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
