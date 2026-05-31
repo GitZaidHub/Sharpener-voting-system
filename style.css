@@ -21,6 +21,7 @@ body {
   border-radius: 20px;
   padding: 30px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  position: relative;
 }
 
 h1 {
@@ -127,11 +128,29 @@ h1 {
 }
 
 #votersList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
   background: #f9fafb;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 8px;
   border-left: 4px solid #4f46e5;
+}
+
+.delete-vote-btn {
+  border: none;
+  background: #ef4444;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.delete-vote-btn:hover {
+  background: #dc2626;
 }
 
 @media(max-width: 600px) {
@@ -142,4 +161,123 @@ h1 {
   .vote-box button {
     width: 100%;
   }
+}
+
+/* API Settings styles */
+.api-settings {
+  background: #f9fafb;
+  border: 2px dashed #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 25px;
+}
+
+.api-settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #374151;
+  font-size: 14px;
+}
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-connected {
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #34d399;
+}
+
+.status-disconnected {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #f87171;
+}
+
+.api-settings-body {
+  display: flex;
+  gap: 10px;
+}
+
+.api-settings-body input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+}
+
+.api-settings-body button {
+  padding: 10px 18px;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.api-settings-body button:hover {
+  background: #3730a3;
+}
+
+.api-help {
+  font-size: 11px;
+  color: #6b7280;
+  margin-top: 8px;
+}
+
+.api-help a {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+
+/* Loading Overlay styles */
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  backdrop-filter: blur(2px);
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #e5e7eb;
+  border-top-color: #4f46e5;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-overlay p {
+  font-weight: bold;
+  color: #4f46e5;
+  font-size: 16px;
 }
