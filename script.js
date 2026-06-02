@@ -8,7 +8,7 @@ let votes = {
 };
 
 let voters = [];
-const apiBaseUrl = "https://crudcrud.com/api/2fc7a83bcd394084894eda310a9c687d";
+const apiBaseUrl = "https://crudcrud.com/api/dfddbb5cfa134aef8faf4c0f3da5b8f4";
 
 // UI Elements
 const voteBtn = document.getElementById("voteBtn");
